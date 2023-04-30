@@ -4,8 +4,8 @@ frappe.ui.form.on('Supplier', {
 		    frappe.call({
 		        method: "library_management.api.supplier_id_generation",
 		        callback: function(response) {
-                    frm.set_value('supplier_id', response.message);
-                    refresh_field('supplier_id');
+			    frm.set_value('supplier_id', response.message);
+			    refresh_field('supplier_id');
                 }
 		    })
 		}
